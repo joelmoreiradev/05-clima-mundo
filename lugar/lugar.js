@@ -1,5 +1,5 @@
 const axios = require('axios'); // importo axios para las solicitudes http
-
+const colors = require('colors/safe')
 
 const getLugarLatLng = async (dir) => {
 
@@ -20,7 +20,7 @@ const direccion = data.standard.city;
 const lat = data.latt;
 const lng = data.longt;
 
-console.log(`direccion es ${direccion}`);
+console.log(`La direccion ingresada fue ${colors.red(direccion)}`);
 
 //   .then(function (response) {
 //     // handle success
